@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="SFE.Api/SFE.Api.csproj" />
+  <Project Path="SFE.Application/SFE.Application.csproj" />
+  <Project Path="SFE.Domain/SFE.Domain.csproj" />
+  <Project Path="SFE.Infrastructure/SFE.Infrastructure.csproj" />
+</Solution>
