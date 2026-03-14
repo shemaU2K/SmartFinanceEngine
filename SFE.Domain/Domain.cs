@@ -1,5 +1,8 @@
-﻿using System;
+﻿using SFE.Domain;
+using System;
 using System.Collections.Generic;
+using static SFE.Domain.Transaction;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SFE.Domain
 {
@@ -98,12 +101,50 @@ namespace SFE.Domain
 
             Balance -= amount;
         }
+
+    }
+    public class Transaction : Entity
+    {
+        public Guid fromWalletId { get; private set; }
+        public Guid toWalletId { get; private set; }
+        public Money Amount { get; private set; }
+        public DateTime Timestamp { get; private set; }
+        private Transaction() { }
+        public Transaction(Guid fromWalletId, Guid toWalletId, Money amount)
+        {
+            if (amount.Amount <= 0)
+                throw new DomainException("Сума транзакції має бути більшою за нуль.");
+            if (toWalletId == Guid.Empty || fromWalletId == Guid.Empty)
+                throw new DomainException("Отримувач та відправник не можуть бути null.");
+            if (toWalletId == fromWalletId)
+                throw new DomainException("Отримувач та відправник не можуть бути однаковими.");
+            this.fromWalletId = fromWalletId;
+            this.toWalletId = toWalletId;
+            Amount = amount;
+            Timestamp = DateTime.UtcNow;
+        }
     }
 
+    class TransactionServiсe()
+    {
+        public Transaction ExecuteTransaction(Wallet fromWallet, Wallet toWallet, Money amount)
+        {
+            if (toWallet == fromWallet)
+                throw new DomainException("Отримувач та відправник не можуть бути однаковими.");
+            if(amount.Amount <= 0)
+                throw new DomainException("Сума транзакції має бути більшою за нуль.");
+            if(amount.Currency != fromWallet.Balance.Currency || amount.Currency != toWallet.Balance.Currency)
+                throw new DomainException("Валюта транзакції повинна відповідати валюті гаманців.");
+            fromWallet.WithdrawFunds(amount);
+            toWallet.AddFunds(amount);
+            return new Transaction(fromWallet.Id, toWallet.Id, amount);
+        }
+    }
     // --- EXCEPTIONS ---
 
     public class DomainException : Exception
-    {
-        public DomainException(string message) : base(message) { }
-    }
+        {
+            public DomainException(string message) : base(message) { }
+        } 
+        
 }
