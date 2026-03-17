@@ -1,10 +1,12 @@
-﻿using System;
+﻿using SFE.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SFE.Domain.Interfaces
 {
-    internal class ITransactionRepository
+    public interface ITransactionRepository
     {
+        Task AddAsycs (Transaction transaction, CancellationToken ct = default);
     }
 }
