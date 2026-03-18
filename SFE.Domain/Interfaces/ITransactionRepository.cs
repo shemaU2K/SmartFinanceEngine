@@ -7,6 +7,6 @@ namespace SFE.Domain.Interfaces
 {
     public interface ITransactionRepository
     {
-        Task AddAsycs (Transaction transaction, CancellationToken ct = default);
+        Task AddAsync(Transaction transaction, CancellationToken ct = default);
     }
 }
