@@ -13,7 +13,6 @@
     <Folder Include="Common\Mapping\" />
     <Folder Include="Common\Behavior\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="Wallets\Commands\TransferMoney\" />
     <Folder Include="Wallets\Queries\" />
   </ItemGroup>
 
