@@ -1,0 +1,82 @@
+\doxysection{SFE.\+Application.\+Wallets.\+Commands.\+Transfer\+Money.\+Transfer\+Money\+Command\+Handler Class Reference}
+\hypertarget{class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler}{}\label{class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler}\index{SFE.Application.Wallets.Commands.TransferMoney.TransferMoneyCommandHandler@{SFE.Application.Wallets.Commands.TransferMoney.TransferMoneyCommandHandler}}
+
+
+Handles the execution of a Transfer\+Money\+Command. Orchestrates the retrieval of wallets from storage, applies the domain-\/level transaction logic, and persists state changes entirely.  
+
+
+Inheritance diagram for SFE.\+Application.\+Wallets.\+Commands.\+Transfer\+Money.\+Transfer\+Money\+Command\+Handler:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler_af34ea06ce00e5d8ee8e90b8eaf2729ca}{Transfer\+Money\+Command\+Handler}} (\doxymbox{\hyperlink{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository}{IWallet\+Repository}} wallet\+Repository, \doxymbox{\hyperlink{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_transaction_repository}{ITransaction\+Repository}} transaction\+Repository, \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_services_1_1_transaction_servi_xD1_x81e}{Transaction\+Serviсe}} transaction\+Service)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the Transfer\+Money\+Command\+Handler class. \end{DoxyCompactList}\item 
+async Task$<$ Guid $>$ \doxymbox{\hyperlink{class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler_a0666c3c94721b4eb420a4e4efee11671}{Handle}} (Transfer\+Money\+Command request, Cancellation\+Token cancellation\+Token)
+\begin{DoxyCompactList}\small\item\em Processes the money transfer workflow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles the execution of a Transfer\+Money\+Command. Orchestrates the retrieval of wallets from storage, applies the domain-\/level transaction logic, and persists state changes entirely. 
+
+\label{class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler_doc-constructors}
+\Hypertarget{class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler_af34ea06ce00e5d8ee8e90b8eaf2729ca}\index{SFE.Application.Wallets.Commands.TransferMoney.TransferMoneyCommandHandler@{SFE.Application.Wallets.Commands.TransferMoney.TransferMoneyCommandHandler}!TransferMoneyCommandHandler@{TransferMoneyCommandHandler}}
+\index{TransferMoneyCommandHandler@{TransferMoneyCommandHandler}!SFE.Application.Wallets.Commands.TransferMoney.TransferMoneyCommandHandler@{SFE.Application.Wallets.Commands.TransferMoney.TransferMoneyCommandHandler}}
+\doxysubsubsection{\texorpdfstring{TransferMoneyCommandHandler()}{TransferMoneyCommandHandler()}}
+{\footnotesize\ttfamily \label{class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler_af34ea06ce00e5d8ee8e90b8eaf2729ca} 
+SFE.\+Application.\+Wallets.\+Commands.\+Transfer\+Money.\+Transfer\+Money\+Command\+Handler.\+Transfer\+Money\+Command\+Handler (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository}{IWallet\+Repository}}}]{wallet\+Repository}{, }\item[{\doxymbox{\hyperlink{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_transaction_repository}{ITransaction\+Repository}}}]{transaction\+Repository}{, }\item[{\doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_services_1_1_transaction_servi_xD1_x81e}{Transaction\+Serviсe}}}]{transaction\+Service}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the Transfer\+Money\+Command\+Handler class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wallet\+Repository} & The injected wallet repository instance.\\
+\hline
+{\em transaction\+Repository} & The injected transaction repository instance.\\
+\hline
+{\em transaction\+Service} & The injected domain logic service instance.\\
+\hline
+\end{DoxyParams}
+
+
+\label{class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler_doc-func-members}
+\Hypertarget{class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler_a0666c3c94721b4eb420a4e4efee11671}\index{SFE.Application.Wallets.Commands.TransferMoney.TransferMoneyCommandHandler@{SFE.Application.Wallets.Commands.TransferMoney.TransferMoneyCommandHandler}!Handle@{Handle}}
+\index{Handle@{Handle}!SFE.Application.Wallets.Commands.TransferMoney.TransferMoneyCommandHandler@{SFE.Application.Wallets.Commands.TransferMoney.TransferMoneyCommandHandler}}
+\doxysubsubsection{\texorpdfstring{Handle()}{Handle()}}
+{\footnotesize\ttfamily \label{class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler_a0666c3c94721b4eb420a4e4efee11671} 
+async Task$<$ Guid $>$ SFE.\+Application.\+Wallets.\+Commands.\+Transfer\+Money.\+Transfer\+Money\+Command\+Handler.\+Handle (\begin{DoxyParamCaption}\item[{Transfer\+Money\+Command}]{request}{, }\item[{Cancellation\+Token}]{cancellation\+Token}{}\end{DoxyParamCaption})}
+
+
+
+Processes the money transfer workflow. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The transfer command payload holding the parameters (Ids, amounts).\\
+\hline
+{\em cancellation\+Token} & Propagates notification that operations should be canceled.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation, returning the newly created \doxylink{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction}{Transaction}\textquotesingle{}s unique Guid.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & Thrown if either the origin or destination wallet cannot be located by ID.\\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+SFE.\+Application/\+\+Wallets/\+\+Commands/\+\+Transfer\+Money/\+\doxymbox{\hyperlink{_transfer_money_command_handler_8cs}{Transfer\+Money\+Command\+Handler.\+cs}}\end{DoxyCompactItemize}

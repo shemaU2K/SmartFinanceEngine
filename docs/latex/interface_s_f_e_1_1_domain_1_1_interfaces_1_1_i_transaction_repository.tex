@@ -1,0 +1,45 @@
+\doxysection{SFE.\+Domain.\+Interfaces.\+ITransaction\+Repository Interface Reference}
+\hypertarget{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_transaction_repository}{}\label{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_transaction_repository}\index{SFE.Domain.Interfaces.ITransactionRepository@{SFE.Domain.Interfaces.ITransactionRepository}}
+
+
+Defines the contract for a repository that manages the persistence of Transaction entities.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task \doxymbox{\hyperlink{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_transaction_repository_a56eb504d91c94995876d0d72f08b5b89}{Add\+Async}} (\doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction}{Transaction}} transaction, Cancellation\+Token ct=default)
+\begin{DoxyCompactList}\small\item\em Asynchronously adds a new transaction record to the underlying data store. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the contract for a repository that manages the persistence of Transaction entities. 
+
+\label{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_transaction_repository_doc-func-members}
+\Hypertarget{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_transaction_repository_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_transaction_repository_a56eb504d91c94995876d0d72f08b5b89}\index{SFE.Domain.Interfaces.ITransactionRepository@{SFE.Domain.Interfaces.ITransactionRepository}!AddAsync@{AddAsync}}
+\index{AddAsync@{AddAsync}!SFE.Domain.Interfaces.ITransactionRepository@{SFE.Domain.Interfaces.ITransactionRepository}}
+\doxysubsubsection{\texorpdfstring{AddAsync()}{AddAsync()}}
+{\footnotesize\ttfamily \label{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_transaction_repository_a56eb504d91c94995876d0d72f08b5b89} 
+Task SFE.\+Domain.\+Interfaces.\+ITransaction\+Repository.\+Add\+Async (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction}{Transaction}}}]{transaction}{, }\item[{Cancellation\+Token}]{ct}{ = {\ttfamily default}}\end{DoxyParamCaption})}
+
+
+
+Asynchronously adds a new transaction record to the underlying data store. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transaction} & The transaction entity to persist.\\
+\hline
+{\em ct} & A token to monitor for cancellation requests.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+SFE.\+Domain/\+\+Interfaces/\+\doxymbox{\hyperlink{_i_transaction_repository_8cs}{ITransaction\+Repository.\+cs}}\end{DoxyCompactItemize}

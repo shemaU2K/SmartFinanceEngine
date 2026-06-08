@@ -1,0 +1,4 @@
+var _transfer_money_command_handler_8cs =
+[
+    [ "SFE.Application.Wallets.Commands.TransferMoney.TransferMoneyCommandHandler", "class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler.html", "class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler" ]
+];
