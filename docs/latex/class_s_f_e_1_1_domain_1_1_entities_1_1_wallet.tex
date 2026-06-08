@@ -1,0 +1,153 @@
+\doxysection{SFE.\+Domain.\+Entities.\+Wallet Class Reference}
+\hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet}{}\label{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet}\index{SFE.Domain.Entities.Wallet@{SFE.Domain.Entities.Wallet}}
+
+
+Represents a user\textquotesingle{}s digital wallet, holding a balance in a specific currency.  
+
+
+Inheritance diagram for SFE.\+Domain.\+Entities.\+Wallet:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_a66592bf90517a3ec7717a1b2b7cfbfca}{Wallet}} (string name, Guid user\+Id, \doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2}{Currency}} currency)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the Wallet class with a starting balance of zero. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_a3e1be741e8474506aca13a82a984ea00}{Add\+Funds}} (\doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1}{Money}} amount)
+\begin{DoxyCompactList}\small\item\em Increases the wallet\textquotesingle{}s balance by the specified monetary amount. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_a96fdb15e0151905f690bde67ab992a05}{Withdraw\+Funds}} (\doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1}{Money}} amount)
+\begin{DoxyCompactList}\small\item\em Decreases the wallet\textquotesingle{}s balance by the specified monetary amount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_aaafb5b0e62319fe4fd7ebab069ca5206}{Name}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Gets the descriptive name of the wallet. \end{DoxyCompactList}\item 
+Guid \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_a2806583545d51cacb9e160c74be33436}{User\+Id}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Gets the identifier of the user who owns this wallet. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1}{Money}} \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_afd799d8530175df6a063d3a49c9b815e}{Balance}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Gets the current monetary balance of the wallet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_entity}{SFE.\+Domain.\+Entities.\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+Guid \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_entity_a3953bd27b9871f6cf8965f1f64bac87b}{Id}} = Guid.\+New\+Guid()\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\begin{DoxyCompactList}\small\item\em Gets or sets the globally unique identifier for this entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a user\textquotesingle{}s digital wallet, holding a balance in a specific currency. 
+
+\label{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_doc-constructors}
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_a66592bf90517a3ec7717a1b2b7cfbfca}\index{SFE.Domain.Entities.Wallet@{SFE.Domain.Entities.Wallet}!Wallet@{Wallet}}
+\index{Wallet@{Wallet}!SFE.Domain.Entities.Wallet@{SFE.Domain.Entities.Wallet}}
+\doxysubsubsection{\texorpdfstring{Wallet()}{Wallet()}}
+{\footnotesize\ttfamily \label{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_a66592bf90517a3ec7717a1b2b7cfbfca} 
+SFE.\+Domain.\+Entities.\+Wallet.\+Wallet (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{Guid}]{user\+Id}{, }\item[{\doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2}{Currency}}}]{currency}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the Wallet class with a starting balance of zero. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the wallet.\\
+\hline
+{\em user\+Id} & The owner\textquotesingle{}s user identifier.\\
+\hline
+{\em currency} & The currency operating within this wallet.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Exception} & Thrown if the provided name is empty or whitespace.\\
+\hline
+\end{DoxyExceptions}
+
+
+\label{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_doc-func-members}
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_a3e1be741e8474506aca13a82a984ea00}\index{SFE.Domain.Entities.Wallet@{SFE.Domain.Entities.Wallet}!AddFunds@{AddFunds}}
+\index{AddFunds@{AddFunds}!SFE.Domain.Entities.Wallet@{SFE.Domain.Entities.Wallet}}
+\doxysubsubsection{\texorpdfstring{AddFunds()}{AddFunds()}}
+{\footnotesize\ttfamily \label{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_a3e1be741e8474506aca13a82a984ea00} 
+void SFE.\+Domain.\+Entities.\+Wallet.\+Add\+Funds (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1}{Money}}}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Increases the wallet\textquotesingle{}s balance by the specified monetary amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount to add.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_s_f_e_1_1_domain_1_1_exeptions_1_1_domain_exception}{Domain\+Exception}} & Thrown if the amount is less than or equal to zero.\\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_a96fdb15e0151905f690bde67ab992a05}\index{SFE.Domain.Entities.Wallet@{SFE.Domain.Entities.Wallet}!WithdrawFunds@{WithdrawFunds}}
+\index{WithdrawFunds@{WithdrawFunds}!SFE.Domain.Entities.Wallet@{SFE.Domain.Entities.Wallet}}
+\doxysubsubsection{\texorpdfstring{WithdrawFunds()}{WithdrawFunds()}}
+{\footnotesize\ttfamily \label{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_a96fdb15e0151905f690bde67ab992a05} 
+void SFE.\+Domain.\+Entities.\+Wallet.\+Withdraw\+Funds (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1}{Money}}}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Decreases the wallet\textquotesingle{}s balance by the specified monetary amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount to withdraw.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_s_f_e_1_1_domain_1_1_exeptions_1_1_domain_exception}{Domain\+Exception}} & Thrown if the amount is invalid or the wallet has insufficient funds.\\
+\hline
+\end{DoxyExceptions}
+
+
+\label{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_doc-property-members}
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_afd799d8530175df6a063d3a49c9b815e}\index{SFE.Domain.Entities.Wallet@{SFE.Domain.Entities.Wallet}!Balance@{Balance}}
+\index{Balance@{Balance}!SFE.Domain.Entities.Wallet@{SFE.Domain.Entities.Wallet}}
+\doxysubsubsection{\texorpdfstring{Balance}{Balance}}
+{\footnotesize\ttfamily \label{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_afd799d8530175df6a063d3a49c9b815e} 
+\doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1}{Money}} SFE.\+Domain.\+Entities.\+Wallet.\+Balance\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the current monetary balance of the wallet. 
+
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_aaafb5b0e62319fe4fd7ebab069ca5206}\index{SFE.Domain.Entities.Wallet@{SFE.Domain.Entities.Wallet}!Name@{Name}}
+\index{Name@{Name}!SFE.Domain.Entities.Wallet@{SFE.Domain.Entities.Wallet}}
+\doxysubsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily \label{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_aaafb5b0e62319fe4fd7ebab069ca5206} 
+string SFE.\+Domain.\+Entities.\+Wallet.\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the descriptive name of the wallet. 
+
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_a2806583545d51cacb9e160c74be33436}\index{SFE.Domain.Entities.Wallet@{SFE.Domain.Entities.Wallet}!UserId@{UserId}}
+\index{UserId@{UserId}!SFE.Domain.Entities.Wallet@{SFE.Domain.Entities.Wallet}}
+\doxysubsubsection{\texorpdfstring{UserId}{UserId}}
+{\footnotesize\ttfamily \label{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet_a2806583545d51cacb9e160c74be33436} 
+Guid SFE.\+Domain.\+Entities.\+Wallet.\+User\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the identifier of the user who owns this wallet. 
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+SFE.\+Domain/\+\+Entities/\+\doxymbox{\hyperlink{_wallet_8cs}{Wallet.\+cs}}\end{DoxyCompactItemize}

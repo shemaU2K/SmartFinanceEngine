@@ -1,0 +1,126 @@
+\doxysection{SFE.\+Api/\+\+Program.cs File Reference}
+\hypertarget{_program_8cs}{}\label{_program_8cs}\index{SFE.Api/Program.cs@{SFE.Api/Program.cs}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+builder.\+Services. \doxymbox{\hyperlink{_program_8cs_a0cb2e333d20993187d584d403e6cb328}{Add\+Open\+Api}} ()
+\item 
+\doxymbox{\hyperlink{_program_8cs_a79a944c7f0e25196ca3c5a8638b919b9}{if}} (app.\+Environment.\+Is\+Development())
+\item 
+app. \doxymbox{\hyperlink{_program_8cs_aa4d447fc3129a3aa301d736b8bd04ae9}{Use\+Https\+Redirection}} ()
+\item 
+app. \doxymbox{\hyperlink{_program_8cs_a36eb1b274658a1df13be122fcb8da327}{Map\+Get}} ("{}/\+weatherforecast"{},()=$>$ \{ var forecast=Enumerable.\+Range(1, 5).Select(index=$>$ new \doxymbox{\hyperlink{_program_8cs_ad93e1344caac29dfe0e8ec6ec9833753}{Weather\+Forecast}}(Date\+Only.\+From\+Date\+Time(Date\+Time.\+Now.\+Add\+Days(index)), Random.\+Shared.\+Next(-\/20, 55), \doxymbox{\hyperlink{_program_8cs_a228eff3516389a410c5795dda18c9b30}{summaries}}\+[Random.\+Shared.\+Next(summaries.\+Length)]\+)) .To\+Array();return forecast;\}) .With\+Name("{}Get\+Weather\+Forecast"{})
+\begin{DoxyCompactList}\small\item\em Defines a GET endpoint at "{}/\+weatherforecast"{} that generates and returns randomized mock weather data. \end{DoxyCompactList}\item 
+app. \doxymbox{\hyperlink{_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd}{Run}} ()
+\item 
+record \doxymbox{\hyperlink{_program_8cs_ad93e1344caac29dfe0e8ec6ec9833753}{Weather\+Forecast}} (Date\+Only Date, int TemperatureC, string? Summary)
+\begin{DoxyCompactList}\small\item\em Represents a single daily weather forecast. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \doxymbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}} = Web\+Application.\+Create\+Builder(args)
+\begin{DoxyCompactList}\small\item\em The main entry point for the SFE.\+Api web application. This file configures the web application builder, registers necessary services, and sets up the HTTP request pipeline. \end{DoxyCompactList}\item 
+var \doxymbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} = builder.\+Build()
+\item 
+var \doxymbox{\hyperlink{_program_8cs_a228eff3516389a410c5795dda18c9b30}{summaries}}
+\begin{DoxyCompactList}\small\item\em A statically defined array of descriptive summaries for the mock weather conditions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{_program_8cs_doc-func-members}
+\Hypertarget{_program_8cs_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_program_8cs_a0cb2e333d20993187d584d403e6cb328}\index{Program.cs@{Program.cs}!AddOpenApi@{AddOpenApi}}
+\index{AddOpenApi@{AddOpenApi}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{AddOpenApi()}{AddOpenApi()}}
+{\footnotesize\ttfamily \label{_program_8cs_a0cb2e333d20993187d584d403e6cb328} 
+builder.\+Services. Add\+Open\+Api (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a79a944c7f0e25196ca3c5a8638b919b9}\index{Program.cs@{Program.cs}!if@{if}}
+\index{if@{if}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily \label{_program_8cs_a79a944c7f0e25196ca3c5a8638b919b9} 
+if (\begin{DoxyParamCaption}\item[{app.\+Environment.\+Is\+Development()}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_a36eb1b274658a1df13be122fcb8da327}\index{Program.cs@{Program.cs}!MapGet@{MapGet}}
+\index{MapGet@{MapGet}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{MapGet()}{MapGet()}}
+{\footnotesize\ttfamily \label{_program_8cs_a36eb1b274658a1df13be122fcb8da327} 
+app. Map\+Get (\begin{DoxyParamCaption}\item[{"{}/\+weatherforecast"{}}]{}{, }\item[{()}]{}{, }\item[{\{ var forecast=Enumerable.\+Range(1, 5).Select(index=$>$ new \doxymbox{\hyperlink{_program_8cs_ad93e1344caac29dfe0e8ec6ec9833753}{Weather\+Forecast}}(Date\+Only.\+From\+Date\+Time(Date\+Time.\+Now.\+Add\+Days(index)), Random.\+Shared.\+Next(-\/20, 55), \doxymbox{\hyperlink{_program_8cs_a228eff3516389a410c5795dda18c9b30}{summaries}}\+[Random.\+Shared.\+Next(summaries.\+Length)]\+)) .To\+Array();return forecast;\}}]{}{}\end{DoxyParamCaption})}
+
+
+
+Defines a GET endpoint at "{}/\+weatherforecast"{} that generates and returns randomized mock weather data. 
+
+\begin{DoxyReturn}{Returns}
+An array of 5 randomly generated Weather\+Forecast objects.
+\end{DoxyReturn}
+\Hypertarget{_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd}\index{Program.cs@{Program.cs}!Run@{Run}}
+\index{Run@{Run}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd} 
+app. Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_aa4d447fc3129a3aa301d736b8bd04ae9}\index{Program.cs@{Program.cs}!UseHttpsRedirection@{UseHttpsRedirection}}
+\index{UseHttpsRedirection@{UseHttpsRedirection}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{UseHttpsRedirection()}{UseHttpsRedirection()}}
+{\footnotesize\ttfamily \label{_program_8cs_aa4d447fc3129a3aa301d736b8bd04ae9} 
+app. Use\+Https\+Redirection (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_program_8cs_ad93e1344caac29dfe0e8ec6ec9833753}\index{Program.cs@{Program.cs}!WeatherForecast@{WeatherForecast}}
+\index{WeatherForecast@{WeatherForecast}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{WeatherForecast()}{WeatherForecast()}}
+{\footnotesize\ttfamily \label{_program_8cs_ad93e1344caac29dfe0e8ec6ec9833753} 
+record Weather\+Forecast (\begin{DoxyParamCaption}\item[{Date\+Only}]{Date}{, }\item[{int}]{TemperatureC}{, }\item[{string?}]{Summary}{}\end{DoxyParamCaption})}
+
+
+
+Represents a single daily weather forecast. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Date} & The date the forecast applies to.\\
+\hline
+{\em TemperatureC} & The projected temperature in degrees Celsius.\\
+\hline
+{\em Summary} & A brief qualitative summary of the temperature (e.\+g., "{}\+Chilly"{}).\\
+\hline
+\end{DoxyParams}
+Gets the temperature converted from Celsius to Fahrenheit. This is an evaluated property that computes dynamically.
+
+\label{_program_8cs_doc-var-members}
+\Hypertarget{_program_8cs_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}\index{Program.cs@{Program.cs}!app@{app}}
+\index{app@{app}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{app}{app}}
+{\footnotesize\ttfamily \label{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d} 
+var app = builder.\+Build()}
+
+\Hypertarget{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}\index{Program.cs@{Program.cs}!builder@{builder}}
+\index{builder@{builder}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{builder}{builder}}
+{\footnotesize\ttfamily \label{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5} 
+var builder = Web\+Application.\+Create\+Builder(args)}
+
+
+
+The main entry point for the SFE.\+Api web application. This file configures the web application builder, registers necessary services, and sets up the HTTP request pipeline. 
+
+\Hypertarget{_program_8cs_a228eff3516389a410c5795dda18c9b30}\index{Program.cs@{Program.cs}!summaries@{summaries}}
+\index{summaries@{summaries}!Program.cs@{Program.cs}}
+\doxysubsubsection{\texorpdfstring{summaries}{summaries}}
+{\footnotesize\ttfamily \label{_program_8cs_a228eff3516389a410c5795dda18c9b30} 
+var summaries}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{new}[]}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Freezing"{}},\ \textcolor{stringliteral}{"{}Bracing"{}},\ \textcolor{stringliteral}{"{}Chilly"{}},\ \textcolor{stringliteral}{"{}Cool"{}},\ \textcolor{stringliteral}{"{}Mild"{}},\ \textcolor{stringliteral}{"{}Warm"{}},\ \textcolor{stringliteral}{"{}Balmy"{}},\ \textcolor{stringliteral}{"{}Hot"{}},\ \textcolor{stringliteral}{"{}Sweltering"{}},\ \textcolor{stringliteral}{"{}Scorching"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+A statically defined array of descriptive summaries for the mock weather conditions. 
+

@@ -1,0 +1,89 @@
+\doxysection{SFE.\+Domain.\+Interfaces.\+IWallet\+Repository Interface Reference}
+\hypertarget{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository}{}\label{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository}\index{SFE.Domain.Interfaces.IWalletRepository@{SFE.Domain.Interfaces.IWalletRepository}}
+
+
+Defines the contract for a repository that manages the persistence and retrieval of Wallet entities.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet}{Wallet}}?$>$ \doxymbox{\hyperlink{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository_a507980af45c0719d59fb961143392f90}{Get\+By\+Id\+Async}} (Guid id, Cancellation\+Token ct=default)
+\begin{DoxyCompactList}\small\item\em Asynchronously retrieves a wallet by its unique identifier. \end{DoxyCompactList}\item 
+Task \doxymbox{\hyperlink{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository_a4a44313a3efab2e44c09f9295e93709d}{Add\+Async}} (\doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet}{Wallet}} wallet, Cancellation\+Token ct=default)
+\begin{DoxyCompactList}\small\item\em Asynchronously adds a newly created wallet to the underlying data store. \end{DoxyCompactList}\item 
+Task \doxymbox{\hyperlink{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository_a82e8d7db896f645ef124974afe43a322}{Update\+Async}} (\doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet}{Wallet}} wallet, Cancellation\+Token ct=default)
+\begin{DoxyCompactList}\small\item\em Asynchronously updates an existing wallet in the underlying data store. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the contract for a repository that manages the persistence and retrieval of Wallet entities. 
+
+\label{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository_doc-func-members}
+\Hypertarget{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository_a4a44313a3efab2e44c09f9295e93709d}\index{SFE.Domain.Interfaces.IWalletRepository@{SFE.Domain.Interfaces.IWalletRepository}!AddAsync@{AddAsync}}
+\index{AddAsync@{AddAsync}!SFE.Domain.Interfaces.IWalletRepository@{SFE.Domain.Interfaces.IWalletRepository}}
+\doxysubsubsection{\texorpdfstring{AddAsync()}{AddAsync()}}
+{\footnotesize\ttfamily \label{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository_a4a44313a3efab2e44c09f9295e93709d} 
+Task SFE.\+Domain.\+Interfaces.\+IWallet\+Repository.\+Add\+Async (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet}{Wallet}}}]{wallet}{, }\item[{Cancellation\+Token}]{ct}{ = {\ttfamily default}}\end{DoxyParamCaption})}
+
+
+
+Asynchronously adds a newly created wallet to the underlying data store. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wallet} & The wallet entity to persist.\\
+\hline
+{\em ct} & A token to monitor for cancellation requests.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+\Hypertarget{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository_a507980af45c0719d59fb961143392f90}\index{SFE.Domain.Interfaces.IWalletRepository@{SFE.Domain.Interfaces.IWalletRepository}!GetByIdAsync@{GetByIdAsync}}
+\index{GetByIdAsync@{GetByIdAsync}!SFE.Domain.Interfaces.IWalletRepository@{SFE.Domain.Interfaces.IWalletRepository}}
+\doxysubsubsection{\texorpdfstring{GetByIdAsync()}{GetByIdAsync()}}
+{\footnotesize\ttfamily \label{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository_a507980af45c0719d59fb961143392f90} 
+Task$<$ \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet}{Wallet}}?$>$ SFE.\+Domain.\+Interfaces.\+IWallet\+Repository.\+Get\+By\+Id\+Async (\begin{DoxyParamCaption}\item[{Guid}]{id}{, }\item[{Cancellation\+Token}]{ct}{ = {\ttfamily default}}\end{DoxyParamCaption})}
+
+
+
+Asynchronously retrieves a wallet by its unique identifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier of the wallet.\\
+\hline
+{\em ct} & A token to monitor for cancellation requests.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The wallet if found; otherwise, null.
+\end{DoxyReturn}
+\Hypertarget{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository_a82e8d7db896f645ef124974afe43a322}\index{SFE.Domain.Interfaces.IWalletRepository@{SFE.Domain.Interfaces.IWalletRepository}!UpdateAsync@{UpdateAsync}}
+\index{UpdateAsync@{UpdateAsync}!SFE.Domain.Interfaces.IWalletRepository@{SFE.Domain.Interfaces.IWalletRepository}}
+\doxysubsubsection{\texorpdfstring{UpdateAsync()}{UpdateAsync()}}
+{\footnotesize\ttfamily \label{interface_s_f_e_1_1_domain_1_1_interfaces_1_1_i_wallet_repository_a82e8d7db896f645ef124974afe43a322} 
+Task SFE.\+Domain.\+Interfaces.\+IWallet\+Repository.\+Update\+Async (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet}{Wallet}}}]{wallet}{, }\item[{Cancellation\+Token}]{ct}{ = {\ttfamily default}}\end{DoxyParamCaption})}
+
+
+
+Asynchronously updates an existing wallet in the underlying data store. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wallet} & The modified wallet entity to save.\\
+\hline
+{\em ct} & A token to monitor for cancellation requests.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A task representing the asynchronous operation.
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+SFE.\+Domain/\+\+Interfaces/\+\doxymbox{\hyperlink{_i_wallet_repository_8cs}{IWallet\+Repository.\+cs}}\end{DoxyCompactItemize}

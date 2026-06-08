@@ -1,0 +1,120 @@
+\doxysection{SFE.\+Domain.\+Value\+Objects Namespace Reference}
+\hypertarget{namespace_s_f_e_1_1_domain_1_1_value_objects}{}\label{namespace_s_f_e_1_1_domain_1_1_value_objects}\index{SFE.Domain.ValueObjects@{SFE.Domain.ValueObjects}}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2}{Currency}} \{ \doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2a48f5bd393b268cb9f43a86af1a4d9e8c}{UAH}}
+, \doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2a3518f8944d42212dd37daffe097d216e}{USD}}
+, \doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2aa055562bdb59ad8ba9cc680367308118}{EUR}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the supported types of fiat currencies within the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+record \doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1}{Money}} (decimal Amount, Currency\doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2}{Currency}} Currency\doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2}{Currency}})
+\begin{DoxyCompactList}\small\item\em A value object representing a specific amount of money in a particular currency. Designed to enforce currency safety during arithmetic operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{namespace_s_f_e_1_1_domain_1_1_value_objects_doc-enum-members}
+\Hypertarget{namespace_s_f_e_1_1_domain_1_1_value_objects_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2}\index{SFE.Domain.ValueObjects@{SFE.Domain.ValueObjects}!Currency@{Currency}}
+\index{Currency@{Currency}!SFE.Domain.ValueObjects@{SFE.Domain.ValueObjects}}
+\doxysubsubsection{\texorpdfstring{Currency}{Currency}}
+{\footnotesize\ttfamily \label{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2} 
+enum \doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2}{SFE.\+Domain.\+Value\+Objects.\+Currency}}}
+
+
+
+Represents the supported types of fiat currencies within the application. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UAH@{UAH}!SFE.Domain.ValueObjects@{SFE.Domain.ValueObjects}}
+\index{SFE.Domain.ValueObjects@{SFE.Domain.ValueObjects}!UAH@{UAH}}
+}\Hypertarget{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2a48f5bd393b268cb9f43a86af1a4d9e8c}\label{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2a48f5bd393b268cb9f43a86af1a4d9e8c} 
+UAH&Ukrainian Hryvnia. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{USD@{USD}!SFE.Domain.ValueObjects@{SFE.Domain.ValueObjects}}
+\index{SFE.Domain.ValueObjects@{SFE.Domain.ValueObjects}!USD@{USD}}
+}\Hypertarget{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2a3518f8944d42212dd37daffe097d216e}\label{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2a3518f8944d42212dd37daffe097d216e} 
+USD&United States Dollar. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EUR@{EUR}!SFE.Domain.ValueObjects@{SFE.Domain.ValueObjects}}
+\index{SFE.Domain.ValueObjects@{SFE.Domain.ValueObjects}!EUR@{EUR}}
+}\Hypertarget{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2aa055562bdb59ad8ba9cc680367308118}\label{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2aa055562bdb59ad8ba9cc680367308118} 
+EUR&Euro. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{namespace_s_f_e_1_1_domain_1_1_value_objects_doc-func-members}
+\Hypertarget{namespace_s_f_e_1_1_domain_1_1_value_objects_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1}\index{SFE.Domain.ValueObjects@{SFE.Domain.ValueObjects}!Money@{Money}}
+\index{Money@{Money}!SFE.Domain.ValueObjects@{SFE.Domain.ValueObjects}}
+\doxysubsubsection{\texorpdfstring{Money()}{Money()}}
+{\footnotesize\ttfamily \label{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1} 
+record SFE.\+Domain.\+Value\+Objects.\+Money (\begin{DoxyParamCaption}\item[{decimal}]{Amount}{, }\item[{\doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2}{Currency}}}]{Currency}{}\end{DoxyParamCaption})}
+
+
+
+A value object representing a specific amount of money in a particular currency. Designed to enforce currency safety during arithmetic operations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Amount} & The decimal numeric value of the money.\\
+\hline
+{\em \doxylink{namespace_s_f_e_1_1_domain_1_1_value_objects_a80d36017af04232ea7fb09cb253918e2}{Currency}} & The currency form of the money.\\
+\hline
+\end{DoxyParams}
+Creates a new Money instance representing zero in the specified currency.
+
+
+\begin{DoxyParams}{Parameters}
+{\em currency} & The target currency.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Money object with an amount of 0.
+\end{DoxyReturn}
+
+
+Adds two Money amounts together, ensuring they share the same currency.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first monetary amount.\\
+\hline
+{\em b} & The second monetary amount.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new Money instance representing the combined amount.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Thrown if an attempt is made to add differing currencies.\\
+\hline
+\end{DoxyExceptions}
+
+
+Subtracts one Money amount from another, ensuring they share the same currency.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The base monetary amount.\\
+\hline
+{\em b} & The monetary amount to subtract.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new Money instance representing the remaining amount.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Invalid\+Operation\+Exception} & Thrown if an attempt is made to subtract differing currencies.\\
+\hline
+\end{DoxyExceptions}

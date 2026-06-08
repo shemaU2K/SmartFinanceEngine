@@ -1,0 +1,116 @@
+\doxysection{SFE.\+Domain.\+Entities.\+Transaction Class Reference}
+\hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction}{}\label{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction}\index{SFE.Domain.Entities.Transaction@{SFE.Domain.Entities.Transaction}}
+
+
+Represents a recorded money transfer between two wallets. This entity tracks historical financial movement.  
+
+
+Inheritance diagram for SFE.\+Domain.\+Entities.\+Transaction:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_afde93a5e741f0ab0a621bc4113918079}{Transaction}} (Guid from\+Wallet\+Id, Guid to\+Wallet\+Id, \doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1}{Money}} amount)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the Transaction class, applying necessary domain logic and validations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+Guid \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_aeafb12ee5147b175baff2f9f00968e3c}{from\+Wallet\+Id}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Gets the identifier of the wallet from which funds were withdrawn. \end{DoxyCompactList}\item 
+Guid \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_ae97b758c9fc5cbcb45f30bc13f168457}{to\+Wallet\+Id}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Gets the identifier of the wallet to which funds were deposited. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1}{Money}} \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_a66429469f545482d64fb0e90ec9f55f0}{Amount}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Gets the monetary amount and currency involved in the transaction. \end{DoxyCompactList}\item 
+Date\+Time \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_aa2a34bf2147243664023b333987ce733}{Timestamp}}\hspace{0.3cm}{\ttfamily  \+[get]\+}
+\begin{DoxyCompactList}\small\item\em Gets the exact date and time the transaction was processed (in UTC). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_entity}{SFE.\+Domain.\+Entities.\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+Guid \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_entity_a3953bd27b9871f6cf8965f1f64bac87b}{Id}} = Guid.\+New\+Guid()\hspace{0.3cm}{\ttfamily  \+[get, protected set]\+}
+\begin{DoxyCompactList}\small\item\em Gets or sets the globally unique identifier for this entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a recorded money transfer between two wallets. This entity tracks historical financial movement. 
+
+\label{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_doc-constructors}
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_afde93a5e741f0ab0a621bc4113918079}\index{SFE.Domain.Entities.Transaction@{SFE.Domain.Entities.Transaction}!Transaction@{Transaction}}
+\index{Transaction@{Transaction}!SFE.Domain.Entities.Transaction@{SFE.Domain.Entities.Transaction}}
+\doxysubsubsection{\texorpdfstring{Transaction()}{Transaction()}}
+{\footnotesize\ttfamily \label{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_afde93a5e741f0ab0a621bc4113918079} 
+SFE.\+Domain.\+Entities.\+Transaction.\+Transaction (\begin{DoxyParamCaption}\item[{Guid}]{from\+Wallet\+Id}{, }\item[{Guid}]{to\+Wallet\+Id}{, }\item[{\doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1}{Money}}}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the Transaction class, applying necessary domain logic and validations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Wallet\+Id} & The source wallet ID.\\
+\hline
+{\em to\+Wallet\+Id} & The target wallet ID.\\
+\hline
+{\em amount} & The monetary amount transferred.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_s_f_e_1_1_domain_1_1_exeptions_1_1_domain_exception}{Domain\+Exception}} & Thrown if amount is negative/\+zero, IDs are empty, or IDs are identical.\\
+\hline
+\end{DoxyExceptions}
+
+
+\label{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_doc-property-members}
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_a66429469f545482d64fb0e90ec9f55f0}\index{SFE.Domain.Entities.Transaction@{SFE.Domain.Entities.Transaction}!Amount@{Amount}}
+\index{Amount@{Amount}!SFE.Domain.Entities.Transaction@{SFE.Domain.Entities.Transaction}}
+\doxysubsubsection{\texorpdfstring{Amount}{Amount}}
+{\footnotesize\ttfamily \label{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_a66429469f545482d64fb0e90ec9f55f0} 
+\doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1}{Money}} SFE.\+Domain.\+Entities.\+Transaction.\+Amount\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the monetary amount and currency involved in the transaction. 
+
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_aeafb12ee5147b175baff2f9f00968e3c}\index{SFE.Domain.Entities.Transaction@{SFE.Domain.Entities.Transaction}!fromWalletId@{fromWalletId}}
+\index{fromWalletId@{fromWalletId}!SFE.Domain.Entities.Transaction@{SFE.Domain.Entities.Transaction}}
+\doxysubsubsection{\texorpdfstring{fromWalletId}{fromWalletId}}
+{\footnotesize\ttfamily \label{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_aeafb12ee5147b175baff2f9f00968e3c} 
+Guid SFE.\+Domain.\+Entities.\+Transaction.\+from\+Wallet\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the identifier of the wallet from which funds were withdrawn. 
+
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_aa2a34bf2147243664023b333987ce733}\index{SFE.Domain.Entities.Transaction@{SFE.Domain.Entities.Transaction}!Timestamp@{Timestamp}}
+\index{Timestamp@{Timestamp}!SFE.Domain.Entities.Transaction@{SFE.Domain.Entities.Transaction}}
+\doxysubsubsection{\texorpdfstring{Timestamp}{Timestamp}}
+{\footnotesize\ttfamily \label{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_aa2a34bf2147243664023b333987ce733} 
+Date\+Time SFE.\+Domain.\+Entities.\+Transaction.\+Timestamp\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the exact date and time the transaction was processed (in UTC). 
+
+\Hypertarget{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_ae97b758c9fc5cbcb45f30bc13f168457}\index{SFE.Domain.Entities.Transaction@{SFE.Domain.Entities.Transaction}!toWalletId@{toWalletId}}
+\index{toWalletId@{toWalletId}!SFE.Domain.Entities.Transaction@{SFE.Domain.Entities.Transaction}}
+\doxysubsubsection{\texorpdfstring{toWalletId}{toWalletId}}
+{\footnotesize\ttfamily \label{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction_ae97b758c9fc5cbcb45f30bc13f168457} 
+Guid SFE.\+Domain.\+Entities.\+Transaction.\+to\+Wallet\+Id\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the identifier of the wallet to which funds were deposited. 
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+SFE.\+Domain/\+\+Entities/\+\doxymbox{\hyperlink{_transaction_8cs}{Transaction.\+cs}}\end{DoxyCompactItemize}

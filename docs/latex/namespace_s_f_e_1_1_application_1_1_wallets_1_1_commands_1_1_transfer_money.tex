@@ -1,0 +1,9 @@
+\doxysection{SFE.\+Application.\+Wallets.\+Commands.\+Transfer\+Money Namespace Reference}
+\hypertarget{namespace_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money}{}\label{namespace_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money}\index{SFE.Application.Wallets.Commands.TransferMoney@{SFE.Application.Wallets.Commands.TransferMoney}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_s_f_e_1_1_application_1_1_wallets_1_1_commands_1_1_transfer_money_1_1_transfer_money_command_handler}{Transfer\+Money\+Command\+Handler}}
+\begin{DoxyCompactList}\small\item\em Handles the execution of a Transfer\+Money\+Command. Orchestrates the retrieval of wallets from storage, applies the domain-\/level transaction logic, and persists state changes entirely. \end{DoxyCompactList}\item 
+class {\bfseries Transfer\+Money\+Command\+Validator}
+\begin{DoxyCompactList}\small\item\em Defines behavioral validation rules for the Transfer\+Money\+Command. In an enterprise application, this typically inherits from Fluent\+Validation\textquotesingle{}s Abstract\+Validator to ensure the command payload is inherently valid (e.\+g., Amount \texorpdfstring{$>$}{>} 0) before hitting the handler logic. \end{DoxyCompactList}\end{DoxyCompactItemize}

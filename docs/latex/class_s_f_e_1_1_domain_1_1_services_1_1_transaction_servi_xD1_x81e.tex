@@ -1,0 +1,52 @@
+\doxysection{SFE.\+Domain.\+Services.\+Transaction\+Serviсe Class Reference}
+\hypertarget{class_s_f_e_1_1_domain_1_1_services_1_1_transaction_servi_xD1_x81e}{}\label{class_s_f_e_1_1_domain_1_1_services_1_1_transaction_servi_xD1_x81e}\index{SFE.Domain.Services.TransactionServiсe@{SFE.Domain.Services.TransactionServiсe}}
+
+
+A domain service responsible for coordinating complex operations involving multiple wallets, such as executing safe transactional money transfers.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction}{Transaction}} \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_services_1_1_transaction_servi_xD1_x81e_a2afbaef1ab295002c1cbd970b81df26a}{Execute\+Transaction}} (\doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet}{Wallet}} from\+Wallet, \doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet}{Wallet}} to\+Wallet, \doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1}{Money}} amount)
+\begin{DoxyCompactList}\small\item\em Executes a transfer of funds from one wallet to another, enforcing basic transactional business validation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A domain service responsible for coordinating complex operations involving multiple wallets, such as executing safe transactional money transfers. 
+
+\label{class_s_f_e_1_1_domain_1_1_services_1_1_transaction_servi_xD1_x81e_doc-func-members}
+\Hypertarget{class_s_f_e_1_1_domain_1_1_services_1_1_transaction_servi_xD1_x81e_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_f_e_1_1_domain_1_1_services_1_1_transaction_servi_xD1_x81e_a2afbaef1ab295002c1cbd970b81df26a}\index{SFE.Domain.Services.TransactionServiсe@{SFE.Domain.Services.TransactionServiсe}!ExecuteTransaction@{ExecuteTransaction}}
+\index{ExecuteTransaction@{ExecuteTransaction}!SFE.Domain.Services.TransactionServiсe@{SFE.Domain.Services.TransactionServiсe}}
+\doxysubsubsection{\texorpdfstring{ExecuteTransaction()}{ExecuteTransaction()}}
+{\footnotesize\ttfamily \label{class_s_f_e_1_1_domain_1_1_services_1_1_transaction_servi_xD1_x81e_a2afbaef1ab295002c1cbd970b81df26a} 
+\doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_transaction}{Transaction}} SFE.\+Domain.\+Services.\+Transaction\+Serviсe.\+Execute\+Transaction (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet}{Wallet}}}]{from\+Wallet}{, }\item[{\doxymbox{\hyperlink{class_s_f_e_1_1_domain_1_1_entities_1_1_wallet}{Wallet}}}]{to\+Wallet}{, }\item[{\doxymbox{\hyperlink{namespace_s_f_e_1_1_domain_1_1_value_objects_ab0ce0c49c50846dd629c39da24f59ab1}{Money}}}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Executes a transfer of funds from one wallet to another, enforcing basic transactional business validation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Wallet} & The source wallet to withdraw from.\\
+\hline
+{\em to\+Wallet} & The target wallet to deposit into.\\
+\hline
+{\em amount} & The monetary amount to transfer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new Transaction entity recording the transfer details.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \doxylink{class_s_f_e_1_1_domain_1_1_exeptions_1_1_domain_exception}{Domain\+Exception}} & Thrown if transferring to the same wallet, amount is non-\/positive, or currencies mismatch.\\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+SFE.\+Domain/\+\+Services/\+\doxymbox{\hyperlink{_transaction_service_8cs}{Transaction\+Service.\+cs}}\end{DoxyCompactItemize}
