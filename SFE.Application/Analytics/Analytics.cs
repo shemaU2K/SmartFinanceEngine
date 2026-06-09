@@ -5,9 +5,6 @@ using System.Linq;
 
 namespace SFE.Application.Analytics
 {
-    /// <summary>
-    /// Сутність для симуляції великого обсягу фінансових даних.
-    /// </summary>
     public class AnalyticsTransaction
     {
         public Guid Id { get; set; } = Guid.NewGuid();
@@ -15,29 +12,15 @@ namespace SFE.Application.Analytics
         public decimal TaxRate { get; set; }
     }
 
-    /// <summary>
-    /// Сервіс для генерації фінансових звітів. 
-    /// Демонструє різницю між послідовною та паралельною обробкою (Лабораторна №3).
-    /// </summary>
     public class FinancialAnalyticsService
     {
-        private readonly List<AnalyticsTransaction> _transactions;
-
-        public FinancialAnalyticsService(int recordsCount = 5_000_000)
+        private readonly IReadOnlyList<AnalyticsTransaction> _transactions;
+        public FinancialAnalyticsService(IEnumerable<AnalyticsTransaction> transactions)
         {
-            Console.WriteLine($"[Система] Генерація {recordsCount} транзакцій для аналізу...");
-            _transactions = Enumerable.Range(0, recordsCount)
-                .Select(i => new AnalyticsTransaction
-                {
-                    Amount = i % 1000 + 1,
-                    TaxRate = 0.05m
-                })
-                .ToList();
+            if (transactions == null) throw new ArgumentNullException(nameof(transactions));
+            _transactions = transactions.ToList();
         }
 
-        /// <summary>
-        /// Послідовний (однопоточний) розрахунок.
-        /// </summary>
         public (decimal TotalTax, long ElapsedMilliseconds) CalculateTaxSequentially()
         {
             var sw = Stopwatch.StartNew();
@@ -52,9 +35,6 @@ namespace SFE.Application.Analytics
             return (totalTax, sw.ElapsedMilliseconds);
         }
 
-        /// <summary>
-        /// Паралельний (мультипоточний) розрахунок за допомогою PLINQ.
-        /// </summary>
         public (decimal TotalTax, long ElapsedMilliseconds) CalculateTaxInParallel()
         {
             var sw = Stopwatch.StartNew();
@@ -66,7 +46,7 @@ namespace SFE.Application.Analytics
             return (totalTax, sw.ElapsedMilliseconds);
         }
 
-        private static decimal CalculateComplexTax(decimal amount, decimal rate)
+        public static decimal CalculateComplexTax(decimal amount, decimal rate)
         {
             double temp = Math.Sqrt((double)amount) * Math.Pow((double)rate, 1.5);
             for (int i = 0; i < 10; i++) { temp = Math.Sin(temp) + Math.Cos(temp) + 2; }

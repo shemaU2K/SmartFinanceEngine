@@ -3,4 +3,5 @@
   <Project Path="SFE.Application/SFE.Application.csproj" />
   <Project Path="SFE.Domain/SFE.Domain.csproj" />
   <Project Path="SFE.Infrastructure/SFE.Infrastructure.csproj" />
+  <Project Path="SFE.Test/SFE.Test.csproj" Id="8bf358be-00d9-48b6-b870-3e6052582dc1" />
 </Solution>
